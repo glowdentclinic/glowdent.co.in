@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Glowdent Dental Services - Root canal, implants, cosmetic dentistry, HydraFacial, skin aesthetic & hair treatments in Nashik">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Our Services | Glowdent Dental Clinic - Root Canal Specialist Nashik">
+    <meta property="og:description" content="22 comprehensive services: Root canal treatment, dental implants, cosmetic dentistry, HydraFacial, skin aesthetic & hair restoration treatments.">
+    <meta property="og:image" content="https://glowdent.co.in/images/clinic/clinic_reception.jpg">
+    <meta property="og:url" content="https://glowdent.co.in/services.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:title" content="Our Services | Glowdent Dental Clinic">
+    <meta name="twitter:description" content="22 comprehensive services including root canal, implants, HydraFacial, and more.">
+    <meta name="twitter:image" content="https://glowdent.co.in/images/clinic/clinic_reception.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <title>Our Services | Glowdent Dental Clinic - Root Canal Specialist Nashik</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #35B4BA;
+            --primary-dark: #2CA7AD;
+            --mint: #F4FAF9;
+            --charcoal: #1A2E35;
+            --white: #FFFFFF;
+            --light-gray: #F8F9FA;
+            --text: #333333;
+            --border: #E0E0E0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--white);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 0.5rem;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+
+        .nav-links.mobile-open {
+            display: flex;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            flex-direction: column;
+            background: var(--white);
+            padding: 1rem;
+            gap: 0;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-links.mobile-open li {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .cta-button {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Services Container */
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .service-category {
+            margin-bottom: 4rem;
+        }
+
+        .service-category h2 {
+            font-size: 2rem;
+            color: var(--charcoal);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .service-detail {
+            background: var(--light-gray);
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--primary);
+        }
+
+        .service-detail h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .service-detail .description {
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .service-image {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: block;
+        }
+
+        .highlights {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-item {
+            padding: 0.75rem 0;
+            color: var(--text);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .highlight-item:last-child {
+            border-bottom: none;
+        }
+
+        .highlight-item strong {
+            color: var(--primary);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            border-top: 3px solid var(--primary);
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .cta-button {
+                margin-top: 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .service-detail {
+                padding: 1.5rem;
+            }
+
+            .service-detail h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">Glowdent</a>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <a href="https://wa.link/xraykr" class="cta-button">WhatsApp</a>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Our Comprehensive Services</h1>
+        <p>Root Canal Specialist • Cosmetic Dentistry • Aesthetic Treatments • Hair Restoration</p>
+    </section>
+
+    <!-- Services Container -->
+    <div class="services-container">
+
+        <!-- DENTAL SERVICES -->
+        <div class="service-category">
+            <h2>🦷 DENTAL SERVICES</h2>
+
+            <!-- Root Canal Treatment -->
+            <div class="service-detail">
+                <h3>Root Canal Treatment - Specialist Endodontics</h3>
+                <p class="description">Expert root canal specialist treatment performed by Dr. Zuber Shaikh with 500+ successful cases. Single-visit root canal with temporary crown placement when possible. Designed to minimize pain using advanced technique and proper anesthesia. Saves natural tooth and prevents extraction.</p>
+                
+                <img src="images/dental_before_after/collage_root_canal.jpg" alt="Root Canal Treatment Before and After Results" class="service-image">
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Success Rate:</strong> 95%+ with proper follow-up</div>
+                    <div class="highlight-item"><strong>Duration:</strong> 45-90 minutes per session</div>
+                    <div class="highlight-item"><strong>Pain Level:</strong> Designed to minimize discomfort</div>
+                    <div class="highlight-item"><strong>Temporary Crown:</strong> Placed same day</div>
+                    <div class="highlight-item"><strong>Permanent Crown:</strong> After 1-2 weeks lab fabrication</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Root Canal Consultation</a>
+            </div>
+
+            <!-- Emergency Dental Care -->
+            <div class="service-detail">
+                <h3>Emergency Dental Care - Immediate Pain Relief</h3>
+                <p class="description">Same-day emergency root canal treatment for severe tooth pain and infections. Available Monday to Saturday 11 AM - 9 PM. Immediate pain assessment and relief. Emergency extractions performed when necessary. Comprehensive infection management.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Availability:</strong> Same-day appointments</div>
+                    <div class="highlight-item"><strong>Hours:</strong> Mon-Sat 11 AM - 9 PM</div>
+                    <div class="highlight-item"><strong>Pain Relief:</strong> Within 30-60 minutes</div>
+                    <div class="highlight-item"><strong>Services:</strong> RCT, extraction, antibiotics</div>
+                    <div class="highlight-item"><strong>Follow-up:</strong> Comprehensive care plan</div>
+                </div>
+                <a href="tel:+919370268662" class="btn-primary">Call Emergency: +91-93702-68662</a>
+            </div>
+
+            <!-- Dental Filling -->
+            <div class="service-detail">
+                <h3>Dental Filling - Cavity Treatment</h3>
+                <p class="description">Advanced tooth-colored composite fillings that match natural tooth shade. Designed to minimize discomfort during cavity removal and restoration. Durable fillings with lifespan of 5-10 years. Prevents further decay and tooth damage.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Material:</strong> Tooth-colored composite resin</div>
+                    <div class="highlight-item"><strong>Duration:</strong> 30-45 minutes</div>
+                    <div class="highlight-item"><strong>Durability:</strong> 5-10 years</div>
+                    <div class="highlight-item"><strong>Comfort:</strong> Minimally invasive procedure</div>
+                    <div class="highlight-item"><strong>Cost Effective:</strong> Affordable cavity treatment</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Filling Appointment</a>
+            </div>
+
+            <!-- Tooth Extraction -->
+            <div class="service-detail">
+                <h3>Tooth Extraction - Gentle Removal</h3>
+                <p class="description">Gentle tooth extraction using advanced surgical technique and proper anesthesia. Wisdom tooth removal. Comfortable extraction experience with minimal post-extraction discomfort. Post-operative care instructions provided.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Type:</strong> Simple & surgical extractions</div>
+                    <div class="highlight-item"><strong>Technique:</strong> Atraumatic, gentle extraction</div>
+                    <div class="highlight-item"><strong>Recovery:</strong> 7-10 days healing</div>
+                    <div class="highlight-item"><strong>Wisdom Teeth:</strong> Expert extraction available</div>
+                    <div class="highlight-item"><strong>Care:</strong> Detailed post-op instructions</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Extraction Consultation</a>
+            </div>
+
+            <!-- Teeth Cleaning/Scaling -->
+            <div class="service-detail">
+                <h3>Teeth Cleaning & Scaling - Professional Hygiene</h3>
+                <p class="description">Professional teeth cleaning and scaling to remove tartar and plaque buildup. Prevents gum disease and tooth decay. Polishing for brighter smile appearance. Recommended every 6 months for optimal oral health.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Frequency:</strong> Every 6 months recommended</div>
+                    <div class="highlight-item"><strong>Duration:</strong> 30-45 minutes</div>
+                    <div class="highlight-item"><strong>Removes:</strong> Tartar, plaque, stains</div>
+                    <div class="highlight-item"><strong>Benefit:</strong> Brighter, healthier teeth</div>
+                    <div class="highlight-item"><strong>Prevention:</strong> Prevents cavities & gum disease</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Cleaning Appointment</a>
+            </div>
+
+            <!-- Teeth Whitening -->
+            <div class="service-detail">
+                <h3>Professional Teeth Whitening - Enhanced Brightness</h3>
+                <p class="description">Professional in-office teeth whitening using advanced bleaching technology. Safe and effective. Results visible in single session. Advanced LED technology for optimal whitening.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Results:</strong> Multiple shades brighter in one session</div>
+                    <div class="highlight-item"><strong>Duration:</strong> 60-90 minutes</div>
+                    <div class="highlight-item"><strong>Longevity:</strong> Results last 6-12 months</div>
+                    <div class="highlight-item"><strong>Technology:</strong> Advanced LED whitening system</div>
+                    <div class="highlight-item"><strong>Safety:</strong> Professional-grade, safe application</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Whitening Today</a>
+            </div>
+
+            <!-- Dental Implants -->
+            <div class="service-detail">
+                <h3>Dental Implants - Permanent Tooth Replacement</h3>
+                <p class="description">Experienced team of surgeons performs advanced dental implant placement. Permanent tooth replacement that functions like natural teeth. Durable titanium implants with high success rate. Comprehensive implant care from planning to final crown.</p>
+                
+                <img src="images/dental_before_after/collage_implants.jpg" alt="Dental Implants Before and After Results" class="service-image">
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Material:</strong> Medical-grade titanium implants</div>
+                    <div class="highlight-item"><strong>Success Rate:</strong> High long-term success rates</div>
+                    <div class="highlight-item"><strong>Durability:</strong> 20+ years lifespan</div>
+                    <div class="highlight-item"><strong>Process:</strong> 3-6 months total timeline</div>
+                    <div class="highlight-item"><strong>Implant Placement:</strong> 30-45 minutes surgical time</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Implant Consultation</a>
+            </div>
+
+            <!-- Crown & Bridge -->
+            <div class="service-detail">
+                <h3>Crown & Bridge - Restorative Prosthodontics</h3>
+                <p class="description">Custom-fabricated crowns and bridges to restore damaged or missing teeth. Excellent aesthetic match with natural teeth. Durable restorations lasting 10-15 years. Lab fabrication ensures perfect fit and appearance.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Crown Duration:</strong> 1-2 weeks lab time</div>
+                    <div class="highlight-item"><strong>Material:</strong> Ceramic/porcelain options</div>
+                    <div class="highlight-item"><strong>Durability:</strong> 10-15 years lifespan</div>
+                    <div class="highlight-item"><strong>Preparation:</strong> 1-2 appointments</div>
+                    <div class="highlight-item"><strong>Aesthetic:</strong> Natural tooth-colored appearance</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Crown Consultation</a>
+            </div>
+
+            <!-- Kids Dentistry -->
+            <div class="service-detail">
+                <h3>Kids Dentistry - Pediatric Dental Care</h3>
+                <p class="description">Gentle, child-friendly dental care for kids of all ages. Cavity prevention and treatment. Encouraging positive dental habits from early age. Dr. Zuber's friendly approach makes dental visits comfortable and positive.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Age Group:</strong> Infants through teenagers</div>
+                    <div class="highlight-item"><strong>Approach:</strong> Gentle, child-friendly technique</div>
+                    <div class="highlight-item"><strong>Focus:</strong> Prevention and habit building</div>
+                    <div class="highlight-item"><strong>Services:</strong> Cleaning, fillings, sealants</div>
+                    <div class="highlight-item"><strong>Education:</strong> Brush & floss technique teaching</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Kids Dental Appointment</a>
+            </div>
+
+            <!-- Wisdom Tooth Removal -->
+            <div class="service-detail">
+                <h3>Wisdom Tooth Removal - Expert Surgical Extraction</h3>
+                <p class="description">Expert surgical removal of impacted or problematic wisdom teeth. Gentle extraction with proper anesthesia. Minimal post-operative swelling with detailed care instructions. Experienced in complex wisdom tooth cases.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Type:</strong> Simple & surgical removal</div>
+                    <div class="highlight-item"><strong>Impacted Teeth:</strong> Complex cases handled</div>
+                    <div class="highlight-item"><strong>Technique:</strong> Gentle, atraumatic extraction</div>
+                    <div class="highlight-item"><strong>Recovery:</strong> 7-10 days healing period</div>
+                    <div class="highlight-item"><strong>Swelling:</strong> Minimal with ice therapy</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Wisdom Tooth Consultation</a>
+            </div>
+
+            <!-- Orthodontic Treatment -->
+            <div class="service-detail">
+                <h3>Orthodontic Treatment - Smile Straightening</h3>
+                <p class="description">Teeth straightening and bite correction using braces or clear aligners. Improves appearance and oral health. Treatment duration varies by complexity. Dr. Zuber provides comprehensive orthodontic planning.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Options:</strong> Traditional braces & clear aligners</div>
+                    <div class="highlight-item"><strong>Duration:</strong> 18-36 months average</div>
+                    <div class="highlight-item"><strong>Follow-up:</strong> Regular adjustments</div>
+                    <div class="highlight-item"><strong>Retention:</strong> Retainers after treatment</div>
+                    <div class="highlight-item"><strong>Benefit:</strong> Straight teeth & improved bite</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Orthodontic Consultation</a>
+            </div>
+        </div>
+
+        <!-- AESTHETIC & SKIN SERVICES -->
+        <div class="service-category">
+            <h2>✨ AESTHETIC & SKIN SERVICES</h2>
+
+            <!-- HydraFacial -->
+            <div class="service-detail">
+                <h3>HydraFacial - Advanced Facial Treatment</h3>
+                <p class="description">Professional-grade HydraFacial for deep skin rejuvenation and hydration. Minimally invasive procedure with zero downtime. Visible glowing results. Uses vortex-fusion technology for deep cleansing, hydration, and antioxidant infusion. Results last 3-4 weeks. Monthly treatments maintain optimal skin health. Perfect for all skin types including sensitive skin.</p>
+                
+                <img src="images/aesthetic_before_after/collage_hydrafacial.jpg" alt="HydraFacial Treatment Before and After Results" class="service-image">
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Duration:</strong> 30-45 minutes</div>
+                    <div class="highlight-item"><strong>Downtime:</strong> Zero - immediate results</div>
+                    <div class="highlight-item"><strong>Results:</strong> Visible glowing, hydrated skin</div>
+                    <div class="highlight-item"><strong>Skin Types:</strong> All skin types, including sensitive</div>
+                    <div class="highlight-item"><strong>Frequency:</strong> Monthly for optimal results</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book HydraFacial Today</a>
+            </div>
+
+            <!-- Skin Glow Injection -->
+            <div class="service-detail">
+                <h3>Skin Glow Injection - Glutathione Brightening</h3>
+                <p class="description">Advanced skin brightening using Glutathione injections. Safe, effective brightening treatment. Reduces dark spots and uneven skin tone. Results visible within 4-8 weeks. Multiple sessions recommended for optimal results. Advanced formula for maximum skin glow and radiance.</p>
+                
+                <img src="images/aesthetic_before_after/collage_skin_brightening.jpg" alt="Skin Glow Injection Before and After Results" class="service-image">
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Ingredient:</strong> Premium Glutathione</div>
+                    <div class="highlight-item"><strong>Duration Per Session:</strong> 30-45 minutes</div>
+                    <div class="highlight-item"><strong>Visible Results:</strong> 4-8 weeks</div>
+                    <div class="highlight-item"><strong>Recommended Course:</strong> 4-6 sessions weekly</div>
+                    <div class="highlight-item"><strong>Results:</strong> Brighter, glowing skin tone</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Skin Glow Injection</a>
+            </div>
+
+            <!-- Medi-Facials -->
+            <div class="service-detail">
+                <h3>Medi-Facials - Professional Skin Treatments</h3>
+                <p class="description">Advanced medical-grade facials including HydraFacial, Korean Glass Skin, Pumpkin, BB Glow facials. Customized treatment based on skin type and concerns. Professional results in single session. Zero downtime treatments.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Options:</strong> HydraFacial, Glass Skin, Pumpkin, BB Glow</div>
+                    <div class="highlight-item"><strong>Duration:</strong> 45-60 minutes per treatment</div>
+                    <div class="highlight-item"><strong>Downtime:</strong> Zero - resume normal activity</div>
+                    <div class="highlight-item"><strong>Results:</strong> Visible after first session</div>
+                    <div class="highlight-item"><strong>Frequency:</strong> Monthly for maintenance</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Medi-Facial</a>
+            </div>
+
+            <!-- Laser Acne Scars -->
+            <div class="service-detail">
+                <h3>Laser Acne Scar Treatment - Scar Reduction</h3>
+                <p class="description">Advanced laser technology to reduce appearance of acne scars. Stimulates collagen production for skin remodeling. Multiple sessions for optimal results. Safe for all skin types. Significant improvement visible after treatment course.</p>
+                
+                <img src="images/aesthetic_before_after/collage_acne_scars.jpg" alt="Acne Scar Treatment Before and After Results" class="service-image">
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Technology:</strong> Advanced fractionated laser</div>
+                    <div class="highlight-item"><strong>Duration:</strong> 30-45 minutes per session</div>
+                    <div class="highlight-item"><strong>Sessions Needed:</strong> 4-6 sessions recommended</div>
+                    <div class="highlight-item"><strong>Results Timeline:</strong> 2-3 months after course</div>
+                    <div class="highlight-item"><strong>Downtime:</strong> Minimal, slight redness 24-48 hours</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Laser Scar Treatment</a>
+            </div>
+
+            <!-- Chemical Peeling -->
+            <div class="service-detail">
+                <h3>Chemical Peeling - Deep Skin Rejuvenation</h3>
+                <p class="description">Professional chemical peels for deep skin exfoliation and rejuvenation. Removes damaged outer skin layers. Improves texture, tone, and appearance. Multiple peel strengths available for different skin concerns.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Peel Types:</strong> Superficial, medium, deep peels</div>
+                    <div class="highlight-item"><strong>Duration:</strong> 30-60 minutes</div>
+                    <div class="highlight-item"><strong>Downtime:</strong> 3-7 days depending on depth</div>
+                    <div class="highlight-item"><strong>Results:</strong> Smoother, brighter skin</div>
+                    <div class="highlight-item"><strong>Frequency:</strong> 2-4 weeks apart for series</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Chemical Peel</a>
+            </div>
+
+            <!-- BB Glow -->
+            <div class="service-detail">
+                <h3>BB Glow - Long-Lasting Tinted Skin Treatment</h3>
+                <p class="description">Semi-permanent BB glow treatment providing tinted, glowing skin finish. Lasts 2-3 weeks. No-makeup makeup appearance. Minimally invasive and quick procedure. Natural-looking coverage with healthy glow.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Duration:</strong> 30-45 minutes</div>
+                    <div class="highlight-item"><strong>Longevity:</strong> 2-3 weeks per session</div>
+                    <div class="highlight-item"><strong>Effect:</strong> Natural tinted glow finish</div>
+                    <div class="highlight-item"><strong>Downtime:</strong> None</div>
+                    <div class="highlight-item"><strong>Maintenance:</strong> Touch-ups every 2-3 weeks</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book BB Glow</a>
+            </div>
+
+            <!-- Anti-Aging Treatments -->
+            <div class="service-detail">
+                <h3>Anti-Aging Treatments - Youthful Appearance</h3>
+                <p class="description">Advanced anti-aging treatments including Botox for wrinkles, dermal fillers for volume, and skin tightening procedures. Reduces fine lines and restores youthful appearance. Natural-looking results with minimal downtime.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Botox:</strong> Reduces wrinkles and fine lines</div>
+                    <div class="highlight-item"><strong>Fillers:</strong> Restores volume and fullness</div>
+                    <div class="highlight-item"><strong>Skin Tightening:</strong> Advanced radiofrequency technology</div>
+                    <div class="highlight-item"><strong>Duration:</strong> 15-30 minutes per treatment</div>
+                    <div class="highlight-item"><strong>Results:</strong> Visible in 3-7 days</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Anti-Aging Consultation</a>
+            </div>
+
+            <!-- Mole/Warts Removal -->
+            <div class="service-detail">
+                <h3>Mole & Warts Removal - Safe Surgical Removal</h3>
+                <p class="description">Safe and effective removal of unwanted moles, warts, and skin tags. Dermatological-grade removal techniques. Minimal scarring. Proper post-operative care for optimal healing.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Method:</strong> Surgical excision or laser removal</div>
+                    <div class="highlight-item"><strong>Duration:</strong> 15-30 minutes per lesion</div>
+                    <div class="highlight-item"><strong>Scarring:</strong> Minimal with proper technique</div>
+                    <div class="highlight-item"><strong>Healing:</strong> 5-7 days typical healing</div>
+                    <div class="highlight-item"><strong>Results:</strong> Complete removal in single session</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Removal Consultation</a>
+            </div>
+        </div>
+
+        <!-- HAIR SERVICES -->
+        <div class="service-category">
+            <h2>💇 HAIR RESTORATION SERVICES</h2>
+
+            <!-- Hair PRP -->
+            <div class="service-detail">
+                <h3>Hair PRP Treatment - Natural Hair Growth Stimulation</h3>
+                <p class="description">Advanced platelet-rich plasma therapy for hair loss and regrowth. Uses patient's own growth factors to stimulate follicles. Completely natural and safe. Multiple sessions for optimal results. Visible improvement in hair density within 3-4 months.</p>
+                
+                <img src="images/aesthetic_before_after/collage_hair_restoration.jpg" alt="Hair PRP Treatment Before and After Results" class="service-image">
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Method:</strong> Growth factor concentration from blood</div>
+                    <div class="highlight-item"><strong>Duration:</strong> 45-60 minutes per session</div>
+                    <div class="highlight-item"><strong>Sessions:</strong> 4-6 sessions, 2 weeks apart</div>
+                    <div class="highlight-item"><strong>Results Timeline:</strong> 3-4 months for visible results</div>
+                    <div class="highlight-item"><strong>Safety:</strong> Completely natural, uses own blood</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Hair PRP Treatment</a>
+            </div>
+
+            <!-- Hair GFC -->
+            <div class="service-detail">
+                <h3>Hair GFC - Growth Factor Concentrate Therapy</h3>
+                <p class="description">Advanced growth factor concentrate treatment for hair loss and thinning. Enhanced version of PRP with higher growth factor concentration. Stimulates dormant hair follicles for regrowth.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Method:</strong> Enhanced growth factor therapy</div>
+                    <div class="highlight-item"><strong>Duration:</strong> 45-60 minutes</div>
+                    <div class="highlight-item"><strong>Sessions:</strong> 4-6 sessions recommended</div>
+                    <div class="highlight-item"><strong>Results:</strong> Enhanced compared to PRP</div>
+                    <div class="highlight-item"><strong>Timeline:</strong> 2-3 months for visible results</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Hair GFC Treatment</a>
+            </div>
+
+            <!-- Hair Mesotherapy -->
+            <div class="service-detail">
+                <h3>Hair Mesotherapy - Nutrient Injection Therapy</h3>
+                <p class="description">Microinjection of nourishing serums directly into scalp for hair strengthening. Provides essential nutrients to hair follicles. Reduces hair fall and improves hair quality. Multiple sessions for optimal results.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Duration:</strong> 30-45 minutes</div>
+                    <div class="highlight-item"><strong>Sessions:</strong> 6-10 sessions, weekly</div>
+                    <div class="highlight-item"><strong>Ingredients:</strong> Vitamins, minerals, amino acids</div>
+                    <div class="highlight-item"><strong>Results:</strong> Reduced hair fall, stronger hair</div>
+                    <div class="highlight-item"><strong>Downtime:</strong> Minimal, light scalp sensitivity</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Hair Mesotherapy</a>
+            </div>
+
+            <!-- Hair Threads -->
+            <div class="service-detail">
+                <h3>Hair Threads - Scalp Tightening & Regrowth</h3>
+                <p class="description">Advanced PDO thread technology for scalp lifting and hair follicle stimulation. Tightens scalp and improves blood circulation. Stimulates natural hair growth. Results last 12-18 months.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Technology:</strong> Biocompatible PDO threads</div>
+                    <div class="highlight-item"><strong>Duration:</strong> 60-90 minutes</div>
+                    <div class="highlight-item"><strong>Effect:</strong> Scalp tightening + hair stimulation</div>
+                    <div class="highlight-item"><strong>Results Duration:</strong> 12-18 months</div>
+                    <div class="highlight-item"><strong>Downtime:</strong> Minimal</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Hair Threads</a>
+            </div>
+
+            <!-- Laser Hair Removal -->
+            <div class="service-detail">
+                <h3>Laser Hair Removal - Permanent Hair Reduction</h3>
+                <p class="description">Advanced diode laser technology for permanent hair reduction on face and body. Safe for all skin types. Minimally invasive procedure with cooling technology. 6-8 sessions for optimal results. Results last for extended periods.</p>
+                
+                <div class="highlights">
+                    <div class="highlight-item"><strong>Technology:</strong> Advanced diode laser</div>
+                    <div class="highlight-item"><strong>Duration:</strong> 30-60 minutes per session</div>
+                    <div class="highlight-item"><strong>Sessions:</strong> 6-8 sessions, 4-6 weeks apart</div>
+                    <div class="highlight-item"><strong>Results:</strong> Significant permanent hair reduction</div>
+                    <div class="highlight-item"><strong>Downtime:</strong> None</div>
+                </div>
+                <a href="https://wa.link/xraykr" class="btn-primary">Book Laser Hair Removal</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Glowdent Dental And Aesthetic Clinic. All rights reserved.</p>
+        <p>Root Canal Specialist | Cosmetic Dentistry | Aesthetic Treatments | Hair Restoration</p>
+        <p>Nashik, Maharashtra | Dr. Zuber Shaikh, BDS | Contact: +91-93702-68662</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('mobile-open');
+            hamburger.classList.toggle('active');
+        });
+        
+        // Close menu when link is clicked
+        const navItems = navLinks.querySelectorAll('a');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                navLinks.classList.remove('mobile-open');
+                hamburger.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
